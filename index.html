@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-    ul {
+    .container {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -17,66 +17,124 @@
         top: 0;
         width: 100%;
         
-    }
-
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        padding: 50px;
         
     }
+
+    .navlist {
+        float: left;
+        
+    }
+
+    .navanchor {
+        display: block;
+        margin: 50px auto;
+        text-decoration: none;
+        padding: 8px 16px;
+        color: white;
+        
+    }
+    body {
+        background-color: #0c1824;
+    }
+
+    .image {
+        border-radius: 8px;
+        display: block;
+        margin-left: 285px;
+        margin-right: auto;
+        margin-top: 180px;
+        width: 900px;
+    }
+    h1 {
+        font-size: 60px;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 0;
+        line-height: 1.25;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+    }
+    span {
+        color: #fbc75d;
+        display: block;
+    }
+    p {
+        color: #e2e8f0;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+        font-size: 25px;
+    }
+    .imgtext {
+        position: relative;
+        
+    }
+    .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+    }
+    .logo {
+        width: auto;
+        margin-right: 1rem;
+    }
+    .banner {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        max-width: 900px;
+        border-radius: 0.5rem;
+    }
+
     
+   
 
 </style>
 
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#">Transistor</a></li st>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">How podcasting works</a></li>
-                <li><a href="#">Examples</a></li>
-                <li style="float:right"><a href="#">Sign Up</a></li>
-                <li style="float:right"><a href="#">Log In</a></li>
+            <ul class="container">
+                <li class="navlist"><a class="navanchor" href="#">Pricing</a></li>
+                <li class="navlist"><a class="navanchor" href="#">How podcasting works</a></li>
+                <li class="navlist"><a class="navanchor" href="#">Examples</a></li>
+                <li style="float:right"><a class="navanchor" style="margin-right: 60px;border: 2px solid white;border-radius: 5px;" href="#">Sign Up</a></li>
+                <li style="float:right"><a class="navanchor" href="#">Log In</a></li>
                 
             </ul>
-            
         </nav>
     </header>
-    <div>
+    
         <section>
-            <div>
-                <img src="https://transistor.fm/assets/mess-podcast-studios-chicago.webp" alt="">
+            <div class="imgtext">
+                <img class="image" src="https://transistor.fm/assets/mess-podcast-studios-chicago.webp" alt="">
                 <h1>
-                    Your Podcast's Publishing Platfrom
+                    Your Podcast's 
+                    <span>Publishing Platform</span> 
                 </h1>
                 <p>
-                    Record your audio and upload it to Transistor.
-                    We'll help you distribute your podcast to Apple Podcasts, Spotify, and Google Podcasts. 
-                </p>
-                <button>Sign up</button>
+                    Record your audio and upload it to Transistor.  <br>
+                    We'll help you distribute your podcast to Apple <br> Podcasts, Spotify, and Google Podcasts. 
+                </p c>
+                <a href="#">Sign Up</a>
             </div>
         </section>
-    </div>
     <div>
         <section>
             <div>
-                <h1>
+                <h1 style="text-align: center;font-size: 50px;">
                     Start as many podcasts as you'd like
                 </h1>
-                <p>
+                <p style="text-align: center;font-size: 25px;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;">
                     We don't charge you more for creating additional podcasts.
                 </p>
-                <a href="#">Learn More</a>
+                <div style="text-align: center;">
+                    <a style="text-decoration: none; color: #fbc75d;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;" href="#">LEARN MORE →</a>
+                </div>
+                
             </div>
         </section>
     </div>
-    <div>
-        <iframe width="896" height="504" src="https://www.youtube.com/embed/hUugNVgsXvk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div style="text-align: center;margin-top: 50px;border-radius: .5rem;">
+        <iframe  width="896" height="504" src="https://www.youtube.com/embed/hUugNVgsXvk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div>
         <section>
@@ -104,11 +162,18 @@
                     Embed the podcast player on your website.
                 </p>
                 <a href="#">VIEW MORE EXAMPLES</a>
+                <iframe
+                class="radio"
+                src="https://share.transistor.fm/e/rework/latest/dark"
+                width="100%"
+                height="180"
+                frameborder="0"
+                scrolling="no"
+                seamless="true"
+              ></iframe>
             </div>
+
         </section>
-    </div>
-    <div>
-        <audio src=""></audio>
     </div>
     <div>
         <section>

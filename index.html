@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Transistor fm</title>
 </head>
 <style>
+    * {
+        box-sizing: border-box;
+    }
     .container {
         list-style-type: none;
         margin: 0;
@@ -16,16 +19,17 @@
         position: fixed;
         top: 0;
         width: 100%;
+        z-index: 100;
     }
+    
     .container-footer {
         background-color: #fbc75d;
-        list-style-type: none;
+        color: rgba(12,24,36,.85);
         margin: 0;
         padding: 0;
         overflow: hidden;
         top: 0;
         width: 100%;
-        
     }
     .navlist {
         float: left;
@@ -56,8 +60,18 @@
         padding: 12px 22px;
         color: white;
     }
+    
+    .sign {
+        border: 2px solid white;
+        border-radius: 120px;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+        color: white;
+        text-decoration: none;
+        padding: 12px 22px;
+    }
     body {
         background-color: #0c1824;
+        margin: 0;
     }
 
     .image {
@@ -112,12 +126,78 @@
         display: flex;
         align-items: stretch;
         background-color: #0c1824;
-        width: 300px;
+        flex-wrap: wrap;
     }
    
     .flex-container > div {
         margin: 10px;
-}
+    }
+    .row {
+        display: flex;
+    }
+
+    .column {
+        flex: 48%;
+        padding: 5px;
+    }
+    .column-footer {
+        flex: 50%;
+        padding: 5px;
+    }
+    .column-two {
+        flex: 33.33%;
+        padding: 5px;
+    }
+    ul {
+        list-style-type: none;
+    }
+    .font-semibold {
+        font-weight: 600;
+    }
+    footer {
+        background-color: #fbc75d;
+        color: rgba(12,24,36,.85);
+    }
+    hr {
+        border: 1px solid rgba(12,24,36,.85);
+        margin: auto 50px;
+    }
+    .column-foot {
+        float: left;
+        padding: 50px;
+        height: 500px;
+    }
+    .middle, .right {
+        width: 25%;
+    }
+    .left {
+        width: 50%;
+    }
+    .absolute {
+        position: absolute;
+        top: 230px;
+        left: 110px;
+    }
+
+
+
+
+
+        /* Create three unequal columns that floats next to each other */
+    .column {
+        float: left;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+    .middle, .right {
+        width: 20%;
+    }
+
+    .left {
+        width: 60%;
+    }
+
 </style>
 
 <body>
@@ -133,17 +213,20 @@
             </ul>
         </nav>
     </header>
-            <div class="imgtext">
+            <div >
                 <img class="image" src="https://transistor.fm/assets/mess-podcast-studios-chicago.webp" alt="">
-                <h1>
-                    Your Podcast's 
-                    <span>Publishing Platform</span> 
-                </h1>
-                <p>
-                    Record your audio and upload it to Transistor.  <br>
-                    We'll help you distribute your podcast to Apple <br> Podcasts, Spotify, and Google Podcasts. 
-                </p>
-                <a href="#">Sign Up</a>
+                <div class="absolute">
+                    <h1>
+                        Your Podcast's 
+                        <span>Publishing Platform</span> 
+                    </h1>
+                    <p style="line-height: 36px; line-height: 1.5; margin-bottom: 50px;">
+                        Record your audio and upload it to Transistor.  <br>
+                        We'll help you distribute your podcast to Apple <br> Podcasts, Spotify, and Google Podcasts. 
+                    </p>
+                    <a class="sign" href="#">Sign Up</a>
+                </div>
+                
             </div>
     <div>
         <section>
@@ -247,66 +330,64 @@
         </section>
     </div>
     <div>
-        <div class="flex-container">
-            <div style="flex-grow: 1">
-                <img  src="https://transistor.fm/img/containers/main/mess-podcast-studio-in-chicago.jpg/4355f63aef3e28d0b1b0e1fb7c7ddc1a.webp" alt="">
+        <div class="row" style="margin-top: 50px; margin-left: 20px;margin-right: 20px;">
+            <div class="column">
+                <img  src="https://transistor.fm/img/containers/main/mess-podcast-studio-in-chicago.jpg/4355f63aef3e28d0b1b0e1fb7c7ddc1a.webp" alt="" style="width: 100%; height: 300px;">
             </div>
-            <div style="flex-grow: 1">
-                <img src="https://transistor.fm/img/containers/main/lew-later-studio.jpg/e1cc7e7bd08eb57f0d30a50009dc0cd0.webp" alt="">
+            <div class="column">
+                <img src="https://transistor.fm/img/containers/main/lew-later-studio.jpg/e1cc7e7bd08eb57f0d30a50009dc0cd0.webp" alt="" style="width: 100%; height: 300px;">
             </div>
-                
         </div>
-        
-        <img src="https://transistor.fm/img/containers/main/colleen-pellissier.jpg/ad2987d369a627d392e7b86b2e8a5971.webp" alt="">
-        <img src="https://transistor.fm/img/containers/main/bara-podcast-iceland.jpg/9a4aadaa4af94750c664c328661de060.webp" alt="">
-        <img src="https://transistor.fm/img/containers/main/ashley-baxter-snow.jpg/90b87d78758bb67d2d7269d051462839.webp" alt="">
+        <div class="row" style="margin-left: 20px;margin-right: 20px;">
+            <div class="column-two">
+                <img src="https://transistor.fm/img/containers/main/colleen-pellissier.jpg/ad2987d369a627d392e7b86b2e8a5971.webp" alt="" style="width: 100%; height: 300px;">
+            </div>
+            <div class="column-two">
+                <img src="https://transistor.fm/img/containers/main/bara-podcast-iceland.jpg/9a4aadaa4af94750c664c328661de060.webp" alt="" style="width: 100%; height: 300px;">
+            </div>
+            <div class="column-two">
+                <img src="https://transistor.fm/img/containers/main/ashley-baxter-snow.jpg/90b87d78758bb67d2d7269d051462839.webp" alt="" style="width: 100%; height: 300px;">
+            </div>
+        </div>
     </div>
     <div>
         <h1 style="text-align: center;font-size: 50px;">Try podcasting on Transistor for free</h1>
         <a class="free-trial" style="text-align: center; margin-left: 520px;margin-bottom: 100px; font-size: 18px; margin-right: 520px; border: 2px solid white;border-radius: 120px;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;" href="#">Start a 14-day trial</a>
 
     </div>
-    <footer class="container-footer">
-        <div>
-            <ul>
-                <li class="navlist"><a class="footanchor" href="#">About</a></li>
-                <li class="navlist"><a class="footanchor" href="#">Blog</a></li>
-                <li class="navlist"><a class="footanchor" href="#">Podcast</a></li>
-                <li class="navlist"><a class="footanchor" href="#">Privacy</a></li>
-                <li class="navlist"><a class="footanchor" href="#">Terms</a></li>
-                <li class="navlist"><a class="footanchor" href="#">Affiliate</a></li>
-            </ul>
+    <footer>
+        <div class="container-footer">
+            <div>
+                <ul class="font-semibold">
+                    <li class="navlist"><a class="footanchor" href="#">About</a></li>
+                    <li class="navlist"><a class="footanchor" href="#">Blog</a></li>
+                    <li class="navlist"><a class="footanchor" href="#">Podcast</a></li>
+                    <li class="navlist"><a class="footanchor" href="#">Privacy</a></li>
+                    <li class="navlist"><a class="footanchor" href="#">Terms</a></li>
+                    <li class="navlist"><a class="footanchor" href="#">Affiliate</a></li>
+                </ul>
+            </div>
         </div>
-
         <hr>
 
-        <div>
-            <div>
-                <h3>ABOUT US</h3>
-                <p>Transistor provides podcast hosting and analytics for thousands of organizations, brands, and creatives around the world.</p>
-                <a href="#">LEARN HOW TO START A PODCAST</a>
+        <div class="row">
+            <div class="column left" style="background-color:#fbc75d;">
+                <h2 style="font-size: 1.125rem;">ABOUT US</h2>
+                <p style="color: #0c1824; font-size: 1.125rem;">Transistor provides podcast hosting and analytics for thousands of organizations, brands, and creatives around the world.</p>
             </div>
-            <div>
-                <h3>CONTACT</h3>
-                <p>support@transistor.fm</p>
+            <div class="column middle" style="background-color:#fbc75d;">
+                <h2 style="font-size: 1.125rem;">CONTACT</h2>
+                <p style="color: #0c1824; font-size: 1.125rem;">support@transistor.fm</p>
                 <div>
-                    <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAZlBMVEX///8AAAD7+/vz8/P4+Pi3t7fW1tavr6+ysrK7u7uTk5Pm5uZsbGzZ2dnd3d0pKSns7OyoqKh0dHRkZGSAgIDGxsZUVFRFRUUZGRmfn59NTU1fX1/Q0NCGhoYgICA/Pz8QEBA3NzcgC06yAAAEKUlEQVRoge2aW6OyKhCGPeAJW6Jmpnn+/3/yqyzTAGFA2/vC52otBd7AYWY4GMbBwcHBgWFZP5e0Iydp0vP5lJW+a/9KFdX41poT7bW58LQ3HRIvNymuJUva8p3tZC8dLfuAJFTROjfrxe/QkEUpW/bBLVwUDe6/8DzXQmasrFsXfN07wVQwLp8PLvPKjXlVNcNgVfYOfhYLk9v472nZ4fsDpKTri3TvyqGDu/7939+8tvd4kqkoX8S697k1+7tcVB/nQga3sEhGd061qB6/xiGD6loDUJcsLcl5P0+Bwg1Qt39Prpd+Ob3JQbp/QN3ipeumo6Vbp8+7ATKrzjDd/Nm2iwvzNtZHt9nb1pXWlbLoT3exZUR+9rBw8vJW9rAo4MsKr3hKBmdckdGI+7fvWgqbZiM33BEBCX/w3i18C5v535rgG09R9+NCKGGzL1cE1UZ6ovm0gK706yoS6dI/V4q5k0IVqwQWCEctq5aIZtEGZpbp11MUh1lJwFdveGZyvbA1nyRw2T74aiPkFs0v3IgFF75Rk8ViWNck7XCSopJfh6MbAhvpcMTqNrjHJ0Yr/LF+UlQe3W2wcMXKcIRxpjgn4R7CUikMafyZF4fFJp6wcRJXHMnLYFyQxdAYcWZOEBvWCMnTBuq5WMZlKDoiELxUEpq4geE5fyT9mRWhQ208ujIbmLtBYSxZ+9T9QZ+/I8Q9Pb6vM0n50GbHx23oa0r4PSOHzN+xz4T2uopJDJCOzl0tZuqzNSz/seennWAlrmB/rwIrg7OVEkYgjPzDMLL9dQkzKNb7C3PW/DdxTU08trC7uzBvA2/v0EQ4uka8vi+oDX8lJtwZ1GNlxb2v++LrKi+0pVhf8+5oYIJl/m75Xreuq76fIkJ8ChExzjT0IRL7V5a/slZWRbSdMmI71cbOpBXuIE0D7m2aYjdCwbr069qtAw9vGa0K8T7hPmFZZt9/D5sumDnPF3tECjmT3n4uDXJHeNtnIrJHp1uHKOnTFcQ5kFVFxrJGok3dlpxljWw5ma8A3S1XUr38QD9xVY9XvqE3HwRsFJXFwYEC4V7crgi1k3BXO/PrgB94os60Vs29/BklReyk6iNOby7BCC+ONyjorp3fyEqrZCPgiUSjcLwkH5L4RCpZH3WuBSZUms5E9/vGyaAgaw6a9hyXSrJmruo3RlzVnS/oTZIFEVYOT9IXG2hRX2OX7wq4FObWMbIsZMdh7SS40glKUhcLJuKsKAghbaGdap2lrlLMqDfZJu8c+J0s5GivDQlWu3iHAq2lS4s15q6jLN2W6hccn7hKqxeyQQA0UAL82FpjvCQuc9mp3GHd7GaJFQeLa8Msii7zmDcldEFhkGS3gSHfDte0dKJdL0+jOLr4CW6y9FRVpzRtysQL/mz7hxfGLes/uJ5+cHBw8L/jH6ZlP1S5R5W2AAAAAElFTkSuQmCC" alt=""></a>
-                </div>
-                <div>
-                    <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAZlBMVEUAAAD///+CgoJERETCwsJWVlb4+Pjx8fHY2Njl5eWFhYUwMDDV1dX7+/uenp5NTU3Ly8upqal7e3txcXEpKSlnZ2cYGBjf39/r6+tfX1+VlZW3t7cMDAw/Pz8TExMjIyM3NzeNjY1i8Xg3AAADdklEQVR4nO3a13ajMBAG4KGJZrpFExjz/i8ZYbCDEzsbFXt2z+q/yk3CdwiSRtKAhR3ABhiBERiBERiBERiBERiBEfyDgoT4YZDnLmNFmqb9XFaUdp23JMsyZwv/0VvTdZTSqipLO+r7dE1RMNfND01Lkl8KArdIe5t6znishwH0ZRiOo2enLA/ID4Kwd04aH/o4p5G6/mMBiV7+9Gvi4pGAve35F0PwTfC+F7DF/SJ4O+BG2ATp+wFwCneCHAEAkO0EGYoA2E3g4gCgvgk8JAHkm8DHAkC1CQo0weCvAoomWP4NXEDwAGBfBAdEgZcsgh5RMIWLoEIUwIELCNKEuIZxQXjEFMxcEGACgHIBzrp4TcYF763OvibmArw5+SJIwJqFf+sc6xNMLUhMB1Errn6WoQGrE/4tPpm3pS7CASTKE/uyv9JkyEGiRrTX+rrRsqq7YI2yAr6qaijvGFjiH/ZNwMt8R12QKAm4QXFhK5QFVuIqvYcUiPjSeC/gZR5TWF5n8NUFSuV2BO2kQ2AlqfjfuaSEsNYi4PueWcpQQiN+cvRYwKdJmUMIrQKp5aKCQPzI7rlAYrmgugV8uRBbbDuQKFR/FvBpUmS56EBiz/YngdCRyEsEbS/wdXv6BX4vNMtqfwdJITjL6xYUwjMs1SkgTKKMp/pGo2SdUGkTCE0Cu5Sa5kT5elHPyqRSM+uoDwKlfYN6jaS6d+J1opIgVD4G65Vq5dBWfb7afsGPxD+h75HftRFNF0NMcudKtB3EMpnd+0zEF6CncWXOUBzlDfMuOWDeLiw5AMZd5y5DgH2eWIfYZ6pHH/tcOUY/W3eW+wV9Y1siHRf4Oke3cKLlngl1QigWgbYjYpksN12ow3G97WsQBeuNJ0EcDOutL+aHsN58I34I19t/vMv30tq6QNBmhGsXCNr9/2hdBVgvIf8UNCgDsrQ+BSgdSWeyFyCMyKm17gQWe3135l3OG2DXIRm8tTOrvHWr7vtUc/HNi2Ro8PnU+15dn5Xeq4fF1PXt/pnf+pVJG7i9TZeG5PEcH49TrfSBDPU0HePzeGlrrqLUDdovD/yxY9pv2zBsgkOeuzysSPt+nu2Kes45nur67hTuVE/xmHm0jOa5T5c+aXdplQ6aMGxbnzx/ilrXeEL8JU/7sX+Tv7tv3QiMwAiMwAiM4H8UfABr5TmUMcbamQAAAABJRU5ErkJggg==" alt=""></a>
-                </div>
-                <div>
-                    <a href="#"><img src="data:image/png;base64,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" alt=""></a>
-                </div>
-                <div>
-                    <a href="#"><img src="data:image/png;base64,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" alt=""></a>
+
                 </div>
             </div>
-            <div>
-                <h3>WE PROUDLY SUPPORT</h3>
-                <a href="#"><img src="https://transistor.fm/assets/1ftp-dark.png" alt=""></a>
+            <div class="column right" style="background-color:#fbc75d; ">
+                <h2 style="font-size: 1.125rem;">WE PROUDLY SUPPORT</h2>
+                <p style="color: #0c1824; font-size: 1.125rem;"><img src="" alt=""></p>
             </div>
         </div>
+
     </footer>
 </body>
 </html>
